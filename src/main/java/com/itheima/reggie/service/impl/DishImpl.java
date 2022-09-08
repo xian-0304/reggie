@@ -27,7 +27,7 @@ public class DishImpl extends ServiceImpl<DishMapper, Dish> implements DishServi
      */
     @Override
     @Transactional //事务管理注解
-    public void sevaWithFlovor(DishDto dishDto) {
+    public void saveWithFlavor(DishDto dishDto) {
         //dish表格操作
         this.save(dishDto);
 
@@ -64,7 +64,7 @@ public class DishImpl extends ServiceImpl<DishMapper, Dish> implements DishServi
 
     @Override
     @Transactional
-    public void updataWithFlovor(DishDto dishDto) {
+    public void updateWithFlavor(DishDto dishDto) {
         //更新dish表    dishDto是子类,直接赋值可以实现dish表更新
         this.updateById(dishDto);
 
